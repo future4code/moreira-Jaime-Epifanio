@@ -52,7 +52,7 @@ function imprimeInformacoesUsuario() {
   const email = prompt("Digite seu email!!")
 
   console.log(`Meu nome é ${nome}, tenho ${idade} anos, e o meu email é ${email}.`)
-}
+} 
 
 // EXERCÍCIO 05
 function imprimeTresCoresFavoritas() {
