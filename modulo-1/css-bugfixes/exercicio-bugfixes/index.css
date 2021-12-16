@@ -113,6 +113,10 @@ td button {
     color: black;
 }
 
+td button:hover{
+    background-color: #dfba11;
+    
+}
 td img {
     width: 40px;
 }
