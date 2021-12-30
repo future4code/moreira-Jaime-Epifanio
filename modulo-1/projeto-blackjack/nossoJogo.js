@@ -14,35 +14,33 @@
 const mensagemParaUsuario = ("Boas vindas ao jogo de Blackjack!")
 console.log (mensagemParaUsuario)
 
-let confirmacaoUsuario = confirm("Quer iniciar uma nova rodada?")
+const confirmacaoUsuario = confirm("Quer iniciar uma nova rodada?")
 
-if (confirmacaoUsuario)  {
-	console.log ("Vamos jogar!") // o que fazer se o usuário clicar "ok"
-} else {
-	console.log ("O jogo acabou!")// o que fazer se o usuário clicar "cancelar"
+    let primeiraNovaCarta = comprarCarta()
+    let segundaNovaCarta = comprarCarta()
+    let terceiraNovaCarta = comprarCarta()
+    let quartaNovaCarta = comprarCarta()
+
+    const pontuacaoDoUsuario = primeiraNovaCarta.valor + segundaNovaCarta.valor
+    const pontuacaoDoComputador = terceiraNovaCarta.valor + quartaNovaCarta.valor
+
+
+if (confirmacaoUsuario === false)  {
+	console.log ("O jogo acabou!") // o que fazer se o usuário não clicar em OK e "cancelar" a continuidade do jogo.
+
+} else {	
+   console.log(`Usuario - cartas: , ${primeiraNovaCarta.texto}, ${segundaNovaCarta.texto},  - pontuação, ${pontuacaoDoUsuario}`) 
+   console.log(`Computador - cartas: , ${terceiraNovaCarta.texto}, ${quartaNovaCarta.texto} - pontuação, ${pontuacaoDoComputador}`)
+   // o que fazer se o usuário clicar "ok"
 }
 
-const cartasParaUsuario = comprarCarta(); 
-// Sorteia uma carta. Por exemplo, o rei de ouros
-
-console.log(`Usuário - cartas: ${cartasParaUsuario.texto} - pontuação ${cartasParaUsuario.valor}` )
-         
-
-const cartasParaComputador = comprarCarta();
-console.log(`Computador - cartas: ${cartasParaComputador.texto} - pontuação ${cartasParaComputador.valor}`)
-
-const comparacaoDeCartas = (numero1, numero2) => {
-if(numero1 > numero2) {
-console.log(`O usuário ganhou!`)
-}else if(numero1 < numero2) {
-console.log(`O computador ganhou`)
-}else if(numero1 === numero2) {
+if (pontuacaoDoUsuario > pontuacaoDoComputador) {
+console.log("O usuário ganhou!")
+}else if (pontuacaoDoUsuario === pontuacaoDoComputador) {
 console.log(`Empate!`)
 }
+else {
+console.log(`O computador ganhou`)
 }
-console.log(comparacaoDeCartas(cartasParaUsuario.valor, cartasParaComputador.valor))
-
-
-
 
 
