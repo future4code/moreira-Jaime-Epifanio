@@ -9,101 +9,111 @@ html {
     margin:0;
     padding:0;
     font-family: 'Poppins', sans-serif;
-}
-
-/* <!-- ínicio do cabeçalho --> */
-
-#cabecalho {
-    background-color: #0B3954;
-    color:white;
-    display:flex;
-    height: 70px;
-}
-
-#cabecalho h2 {
-    margin-left: 45px;
-    font-size: 20px;
-    padding-top:15px;
-}
-
-.links-cabecalho {
-color:white;
-text-decoration: none;
-margin-top: 20px;
-margin-left: 550px;
-}
-
-.links-cabecalho span {
-font-size: 25px;
-margin-right: 5px;
-}
-
-.links-cabecalho span a {
-    color:white;
-    text-decoration:none;
-    font-size: 20px;
-    margin-left: 15px;
+    box-sizing: border-box;
     
 }
-
-.links-cabecalho span a:hover {
-    border-bottom: 1px solid white;
+/* ------------------------------------------------------------------------------------------------------------------- */
+/* <!-- ínicio do cabeçalho --> */
+header{
+    background-color:#0B3954;
+    height: 70px;
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    color:white
 }
 
+.links-cabecalho a {
+    margin: 0px 7px;
+    font-size: 22px;
+    color:white;
+    text-decoration:none;
+}
+
+.links-cabecalho a:hover {
+    border-bottom: 1px solid white;
+}
 /* <!-- fim do cabeçalho --> */
 
-#banner-info {
+/* ------------------------------------------------------------------------------------------------------------------- */
+
+/* <!-- banner início --> */
+#main-banner {
+    width: 100%;
+}
+
+.menu-principal {
     width: 100%;
     background-image: url(img/notebook.jpg);
-    background-repeat: no-repeat;
     background-size: cover;
 }
 
-#banner-info h1 {
-    color: white;
-    margin: 0 auto;
-    background-color: #0B3954;
-    width: 830px;
-    font-size: 26px;
-}
-
-#banner-info img {
-    height: 300px;
-    border-radius: 150px;
-    padding-top: 20px;
-    margin-left:530px;
+.banner-titulo {
+    display: flex;
+    justify-content: center;
+    color:white;
     
 }
 
-#banner-info p {
+.banner-titulo span {
+    color: white;
+    background-color: #0B3954;
+    font-size: 26px;
+    font-weight: bold;
+    padding: 0px 6px;
+}
+
+.banner-info {
+    display: flex;
+    justify-content: center;
+}
+
+.banner-info img {
+    height: 300px;
+    border-radius: 150px;
+    padding-top: 20px;
+    
+    /* margin-left:530px; */
+}
+
+.banner-ingles {
     color:white;
     text-align: center;
     padding: 10px;
     font-size: 20px;
 }
+/* <!-- banner fim --> */
 
+/* ------------------------------------------------------------------------------------------------------------------- */
+
+/* <!-- sobre mim inicio --> */
 #sobre-mim {
+    color: white;
     background-color: #0B3954;
-    text-align: center;
-    color: #FFF;
-    padding-top: 50px;
-    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 70px;
 }
 
 #sobre-mim h2 {
-    margin-bottom: 24px;
+    padding: 20px 0px;
 }
 
 #sobre-mim p {
-
-    width: 1000px;
-    margin: 0 auto;
+    width: 80%;
     text-align: justify;
 }
+/* <!-- sobre mim fim --> */
 
+/* ------------------------------------------------------------------------------------------------------------------- */
+
+/* <!-- habilidades inicio --> */
 .container {
     background-color: lightblue;
     display: flex;
+    flex-wrap: wrap;
     width: 80%;
     margin : -55px auto 50px;
     border-radius: 50px;
@@ -112,7 +122,7 @@ margin-right: 5px;
 .containers {
     width: calc(100% / 3);
     text-align: center;
-    padding: 50px;
+    padding: 50px 0px;
 }
 
 .central {
@@ -123,7 +133,11 @@ margin-right: 5px;
 .imag {
     width: 80px;    
 }
+/* <!-- habilidades fim --> */
 
+/* ------------------------------------------------------------------------------------------------------------------- */
+
+/* <!-- jobs inicio --> */
 .job-container {
     display: flex;
     justify-content: center;
@@ -158,86 +172,80 @@ margin-right: 5px;
     width: 300px;
     height: 300px;
 }
+/* <!-- jobs fim --> */
+
+/* ------------------------------------------------------------------------------------------------------------------- */
+
+/* <!-- hard skills ínicio --> */
+.skills-section {
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    height: 500px;
+    width: 70%;
+    margin: 50px auto;
+}
 
 #skills {
-    padding: 32px;
-}
-.skills-container {
-    width: 80%;
-    height: 500px;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
-    display: block;
-    margin: 0 auto;
-}
-
-.skills-container h1 {
-    font-size: 30px;
-    text-align: center;
-    padding-top: 24px;
-    margin-bottom: 40px;
-}
-
-.skills-list {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
-
-.skills-frontend {
-    /* background-color: yellow; */
-    text-align: center;
-    border-right: 1px solid #0B3954;
-}
-
-.skills-frontend h3 {
-    margin-bottom: 60px;
-}
-
-.skills-backend h3 {
-    margin-bottom: 60px;
-    text-align: center;
-}
-
-.skills-frontend ul {
-    /* background-color: yellow; */
+    width: 70%;
+    /* height: 100%; */
     display: flex;
-    margin-left: 130px;
+    justify-content: space-around;
+    align-items: center;
+    margin: 50px auto 0px;
 }
 
-.skills-backend ul {
-    /* background-color: red; */
+.skills-titulo h2 {
     text-align: center;
-    margin-right: 50px;
+    padding: 30px 0px;
+    font-size: 30px;
 }
 
-.skills-backend ul {
-    /* background-color: red; */
+.imagens img {
+    width: 50px;
+}
+
+.div1 {
+    width: 100%;
+    border-right: 1px solid black;
+    margin-left: 500px;
+}
+
+.div1-imagens, .div2-imagens {
+    padding: 50px 0px;
+}
+
+.div1, .div2 {
+    padding: 0px;
+    margin: 0px;       
+}
+
+.div1, .div2 {
+    width: 50%;
+}
+
+.div3, .div4 {
+    display: flex;
+    justify-content:center;
+}
+
+.imagens img {
+    margin: 15px 5px;
+}
+
+.divA, .divB {
     display: flex;
     justify-content: center;
 }
 
-.skills-frontend li {
-    list-style: none;
-    margin-left: 50px;
-    
+.div-titulo {
+    margin: 15px;
+    display: flex;
+    justify-content: center;
 }
+/* <!-- hard skills fim --> */
 
-.skills-backend li {
-    list-style: none;
-    margin-left: 50px;
+/* ------------------------------------------------------------------------------------------------------------------- */
 
-}
-
-.skills-list img {
-    width: 50px;
-}
-
-.posicao-icones2 {
-    padding-top: 30px;
-}
-
-
-
-
+/* <!-- formulário ínicio --> */
 #contato {
     height: 650px;
     background-color: #0B3954;
@@ -251,7 +259,7 @@ margin-right: 5px;
 }
 
 #contato img {
-    width: 60px;
+    width: 110px;
     padding: 25px;
     margin-left: 35px;
 }
@@ -285,11 +293,15 @@ margin-right: 5px;
 .msg-final {
     padding: 20px;
 }
+/* <!-- formulário fim --> */
 
+/* ------------------------------------------------------------------------------------------------------------------- */
+
+/* <!-- footer inicio --> */
 .redes-sociais {
     display: block;
     width: 100%;
-    height: 100px;
+    height: 140px;
     background-color: #052233;
     text-align: center;
     margin: 0 auto;
@@ -307,9 +319,10 @@ margin-right: 5px;
     color: white;
 }
 
-
 .redes-sociais h2 {
     color: #ffffff;
     margin-bottom: 20px;
 }
+/* <!-- footer fim --> */
+
 
