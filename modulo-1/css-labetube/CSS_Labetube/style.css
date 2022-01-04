@@ -1,0 +1,67 @@
+/* Exercicio 1 */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    font-size: 20px;
+    background-color: orangered;
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    align-items: center;
+    padding: 10px 10px;
+}
+
+.titulo-header h3 {
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+button{
+    padding: 8px 40px;
+    align-items: left;
+}
+
+.video-tube video {
+    width: 295px;
+    box-shadow: 3px 3px 3px darkgray ;
+    margin: 10px;
+    text-align: center;
+    
+}
+
+.video-tube h3{
+    text-align: center;
+}
+
+.bordas-videos {
+    display: flex;
+}
+
+.video-tube {
+    border: 1px solid black;
+    margin: 10px;
+}
+
+.galeria-videos {
+    display: flex;
+}
+
+footer{
+    background-color: rgb(107, 19, 75);
+}
+footer p{
+    color: white;
+    font-size: 40px;
+    text-align: left;
+    padding: 20px 0px;
+    font-weight: bold;
+    margin-top: 300px;
+}
+
+
+
+
+
