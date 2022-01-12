@@ -1,0 +1,6 @@
+.contatos {
+    display: flex;
+    justify-content: left;
+    border: 1px solid black;
+    
+}
