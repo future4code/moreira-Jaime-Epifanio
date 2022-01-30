@@ -4,12 +4,18 @@ import styled from 'styled-components'
 
 const CardPlaylists = styled.div`
   border: 1px solid black;
+  background-color: white;
   padding: 10px;
   margin: 10px;
   width: 300px;
   display: flex;
   justify-content: space-between;
   cursor: pointer;
+`
+
+const CardFundoTela = styled.div`
+  background-color: white;
+  height: 100vh;
 `
 
 export default class PlaylistsCadastradas extends React.Component {
@@ -58,6 +64,7 @@ export default class PlaylistsCadastradas extends React.Component {
   render() {
       const listaPlaylists = this.state.playlists.map((plays) => {
           return(
+              
               <CardPlaylists 
               key={plays.id}
               onClick={() => this.props.irParaInfoPlaylists(plays.id)}
@@ -69,11 +76,11 @@ export default class PlaylistsCadastradas extends React.Component {
             })
       
             return (
-              <div>
+              <CardFundoTela>
                 <button onClick={this.props.irParaCadastro}>Voltar Para Home</button>
                 <h2>Minhas Playlists</h2>
                 {listaPlaylists}
-              </div>
+              </CardFundoTela>
               );
             }
 

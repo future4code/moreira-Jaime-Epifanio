@@ -17,13 +17,16 @@ const CardBox = styled.div`
 const CardBotaoCriar = styled.button`   
   background-color: yellow;
   margin-top: -6px;
-  position: absolute;
+  margin-bottom: 16px;
+  margin-left: 0px;
+  /* position: absolute; */
   top: 28px;
   left: 890px;
 `
 const CardInput = styled.input`
   margin: 5px 0px;
-  width: 210px;
+  margin-right: 0px;
+  width: 260px;
   `
 const CardButtonConfira = styled.button`
   width: 318px;
@@ -31,6 +34,7 @@ const CardButtonConfira = styled.button`
 
 const CardTitulo = styled.h1`
   color: white;  
+  margin-right: 520px;
 `
 
 export default class CadastroPlaylist extends React.Component {
