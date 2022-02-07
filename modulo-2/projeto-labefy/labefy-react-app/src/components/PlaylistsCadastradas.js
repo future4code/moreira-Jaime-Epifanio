@@ -1,6 +1,9 @@
 import React from "react";
 import axios from "axios";
-import styled from 'styled-components'
+import styled from 'styled-components';
+
+
+
 
 const CardPlaylists = styled.div`
   border: 1px solid black;
@@ -69,6 +72,8 @@ export default class PlaylistsCadastradas extends React.Component {
               key={plays.id}
               onClick={() => this.props.irParaInfoPlaylists(plays.id)}
               >
+              
+
                 <h2>{plays.name}</h2>                
                 <button onClick={() => this.deletarPlaylist(plays.id)}>Deletar Playlist</button>
               </CardPlaylists>
