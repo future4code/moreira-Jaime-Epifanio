@@ -1,40 +1,37 @@
 import axios from 'axios';
 import React from 'react';
 import styled from 'styled-components'
+import { BsSpotify } from 'react-icons/bs';
+
 
 const CardBotão1 = styled.div`
   background-color: black;
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  cursor: pointer;
+  padding: 0 40px;
+
 `
 const CardBox = styled.div`
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
 `
 
 const CardBotaoCriar = styled.button`   
-  background-color: yellow;
-  margin-top: -6px;
-  margin-bottom: 16px;
-  margin-left: 0px;
-  /* position: absolute; */
-  top: 28px;
-  left: 890px;
+  
 `
 const CardInput = styled.input`
-  margin: 5px 0px;
-  margin-right: 0px;
-  width: 260px;
+  
   `
 const CardButtonConfira = styled.button`
-  width: 318px;
+  
   `
 
 const CardTitulo = styled.h1`
-  color: white;  
-  margin-right: 520px;
+  color:white;
+  display: flex;
+  align-items: center;
+  
 `
 
 export default class CadastroPlaylist extends React.Component {
@@ -69,17 +66,20 @@ export default class CadastroPlaylist extends React.Component {
   render() {
     return( 
       <CardBotão1>        
-        <CardTitulo>Labefy</CardTitulo>
-        <p>Criar Playlist</p>
+        <CardTitulo><BsSpotify
+        style={{ marginRight: 10 }}
+        />Labefy</CardTitulo>
+        
         <CardBox>
         <CardInput 
           placeholder={"Digite um Gênero"}
           value={this.state.criar}
-          onChange={this.handleCriar}
+          onChange={this.handleCriar}          
         />
-        <CardButtonConfira onClick={this.props.irParaLista}>Confira Suas Playlists Já Criadas</CardButtonConfira>        
+        <CardBotaoCriar onClick={this.cadastrarPlaylist}>Criar</CardBotaoCriar>                
         </CardBox>
-        <CardBotaoCriar onClick={this.cadastrarPlaylist}>Criar</CardBotaoCriar>
+        <CardButtonConfira onClick={this.props.irParaLista}>Confira Suas Playlists Já Criadas</CardButtonConfira>
+        
       </CardBotão1>
       )
     }
