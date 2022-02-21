@@ -1,25 +1,44 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import styled from "styled-components";
+import Rotas from "./Rotas/Router";
+import { Login } from "./pages/Login";
+
+const BackgroundMain = styled.div`
+  width: 100%;
+`;
+const LogoPlano = styled.img`
+  position: absolute;
+  bottom: 340px;
+  left: 350px;
+`;
+
+const PlanoFundo = styled.img`
+  width: 100%;
+  margin: 0;
+  padding: 0;
+`;
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <BackgroundMain>
+        <div>
+          {/* <PlanoFundo src="https://i.postimg.cc/tgjLC7Y9/Design-sem-nome-14.png" /> */}
+        </div>
+        <Rotas/>
+
+        <LogoPlano src="https://i.postimg.cc/W34rVbn3/LABE-2.png" />
+      </BackgroundMain>
+      
     </div>
   );
 }
 
 export default App;
+
+
+
+
+
+
