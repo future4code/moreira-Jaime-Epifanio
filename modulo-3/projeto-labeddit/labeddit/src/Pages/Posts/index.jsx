@@ -2,6 +2,7 @@ import React from "react";
 import { HeaderSite, Logo } from "../../Components/HeaderAll/styled";
 import { Input, Space } from "antd";
 import { AudioOutlined } from "@ant-design/icons";
+import { BotaoFeeds,BotaoLogout } from "../Posts/styled"
 
 const onSearch = (value) => console.log(value);
 
@@ -31,6 +32,13 @@ export default function Posts() {
             
           }}
         />
+        <BotaoFeeds type="submit">
+          Feeds
+        </BotaoFeeds>
+        
+        <BotaoLogout type="submit">
+          Logout
+        </BotaoLogout>
       </Space>
       ,
     </HeaderSite>

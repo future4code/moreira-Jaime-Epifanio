@@ -1,16 +1,12 @@
 import React from "react";
-import { HeaderSite} from "./style";
+import { HeaderSite, ContainerButton} from "./style";
 
 
 
 export default function HeaderAll() {
   return (
     <HeaderSite>
-<ContainerButtons>
-<button>Logout</button>
-<button>Postar</button>
-</ContainerButtons>
-
+     
 
     </HeaderSite>)
 };
