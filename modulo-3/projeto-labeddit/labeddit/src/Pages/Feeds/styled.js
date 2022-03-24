@@ -13,6 +13,7 @@ box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.1);
 }
 
 `
+
 export const BotaoPosts = styled.button`
     display: flex;
     align-items: center;
@@ -44,3 +45,5 @@ export const BotaoLogout = styled.button`
     font-size: 20px;
     border-radius: 20px;
 `
+=======
+

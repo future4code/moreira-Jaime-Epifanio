@@ -13,6 +13,15 @@ flex-direction:row;
 width:100%;
 height:70px;
 background-color:lightgrey;
+
+
+`
+
+export const ContainerButtons = styled.div`
+width:45%;
+background-color:red;
+color: white;
+
 `
 
 

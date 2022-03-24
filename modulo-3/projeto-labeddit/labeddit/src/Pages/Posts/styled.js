@@ -1,3 +1,4 @@
+
 import styled from 'styled-components';
 
 export const BotaoFeeds = styled.button`
@@ -31,3 +32,4 @@ export const BotaoLogout = styled.button`
     font-size: 20px;
     border-radius: 20px;
 `
+
