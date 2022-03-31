@@ -34,13 +34,13 @@ app.post("/novocurso", (req: Request, res: Response) => {
 }) 
 
 //Exercício 4
-app.get("/retornacurso", (req: Request, res: Response) => {
-    const newCourse = cursos        
-    const newList = newCourse.map((item)=> {
-        return item;
-    });
-    res.status(200).send({result: newList}); 
-}) 
+// app.get("/retornacurso", (req: Request, res: Response) => {
+//     const newCourse = cursos        
+//     const newList = newCourse.map((item)=> {
+//         return item;
+//     });
+//     res.status(200).send({result: newList}); 
+// }) 
 
 
 
