@@ -44,4 +44,4 @@ a)
 
 b)
 
-+ ALTER TABLE Movies DROP COLUMN rating;
++ ALTER TABLE Movies DROP COLUMN rating
