@@ -9,4 +9,19 @@ Content-Type: application/json
 
 }
 ###
-GET http://localhost:3003/TodoListUser/:id
+GET http://localhost:3003/TodoListUser/1
+
+###
+PUT http://localhost:3003/TodoListUser/edit/1
+Content-Type: application/json
+
+{
+    
+	"name": "Astro Devops",
+	"nickname": "astrodevizinho",
+	"email": ""
+
+}
+
+###
+GET http://localhost:3003/TodoListTask/task/1
