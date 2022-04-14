@@ -62,7 +62,7 @@ const Input = styled.input`
   margin-top: 15px;
   width: 40%;
   height: 30px;
-  color: white;
+  color: black;
   border-radius: 25px;
   text-align: left;
   padding-left: 10px;
