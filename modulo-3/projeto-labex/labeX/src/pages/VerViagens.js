@@ -85,7 +85,7 @@ export default function VerViagens() {
     const [nomeViagem, setNomeViagem] = useState([]);  
 
     useEffect(()=> {
-        const url = 'https://us-central1-labenu-apis.cloudfunctions.net/labeX/jaime-epifanio-moreira/trips'                
+        const url = 'https://us-central1-labenu-apis.cloudfunctions.net/labeX/gabarito/trips'                
         axios.get(url)
         .then(res => {
             setNomeViagem(res.data.trips)
