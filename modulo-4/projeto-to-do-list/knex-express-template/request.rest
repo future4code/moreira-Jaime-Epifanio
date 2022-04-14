@@ -1,0 +1,27 @@
+POST http://localhost:3003/TodoListUser
+Content-Type: application/json
+
+{
+    
+	"name": "Astro Dev",
+	"nickname": "astrodev",
+	"email": "astro@dev.com"
+
+}
+###
+GET http://localhost:3003/TodoListUser/1
+
+###
+PUT http://localhost:3003/TodoListUser/edit/1
+Content-Type: application/json
+
+{
+    
+	"name": "Astro Devops",
+	"nickname": "astrodevizinho",
+	"email": ""
+
+}
+
+###
+GET http://localhost:3003/TodoListTask/task/1

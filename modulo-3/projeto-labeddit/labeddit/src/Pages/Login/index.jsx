@@ -13,8 +13,10 @@ export default function Login() {
   const navigate= useNavigate();
   const {form, onChange, clearFields}= useForm({ email: "", password: "" })
 
+
   const url = `${BASE_URL}/users/login`
   const body = form
+
   
   const submitForm = ((e)=>{
     e.preventDefault()
@@ -22,6 +24,24 @@ export default function Login() {
     onSubmitLogin()    
   })
   
+
+  const onSubmitLogin = () => {   
+    
+    const url = `${BASE_URL}/users/login`
+    const body = form 
+ 
+    axios.post(url,body)
+    .then((res) =>{
+      localStorage.setItem('token', res.data.token)
+      alert("Login Autorizado!!")
+      //clearFields()
+      navigate("/feeds")
+      console.log(res.data);
+    }) 
+    .catch((error) =>{
+      //alert("Ops, algo deu errado, por favor tente novamente!!")
+      
+
   const onSubmitLogin = () => {    
  
     axios.post(url, body)
@@ -35,6 +55,7 @@ export default function Login() {
         alert("Algo está errado, tente novamente!")
         console.log(error.res);
         
+
     })
   }
 
@@ -52,6 +73,7 @@ export default function Login() {
           value={form.email}
           onChange={onChange}           
           required 
+
           />
 
          <input
