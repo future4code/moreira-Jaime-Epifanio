@@ -4,3 +4,10 @@ export type user = {
    email: string
    password: string
 }
+
+export type products = {
+   id: number
+   name: string
+   price: number
+   image: string
+}
