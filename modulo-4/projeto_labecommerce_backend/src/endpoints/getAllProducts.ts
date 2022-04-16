@@ -7,8 +7,6 @@ export default async function getAllProducts(req: Request, res: Response): Promi
 
     try {
         const name = req.query
-        //const result: user[] = await connection.raw("SELECT * FROM labecommerce_users")
-        //res.send(result[0])
         const products: products[] = await connection('labecommerce_products')
         res.send(products)
 

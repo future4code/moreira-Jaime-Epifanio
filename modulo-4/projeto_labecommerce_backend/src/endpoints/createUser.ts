@@ -10,18 +10,18 @@ export default async function createUser(
       const { name, email, password } = req.body
       if (!name || !email || !password) {
          res.statusCode = 422
-         throw "'name','email' e 'password' são obrigatórios"
+         throw "'name','email' and 'password' are required!"
       }
 
       await connection('labecommerce_users').insert({name,email,password})
-      res.status(201).end("Usuário criado!")
+      res.status(201).end("User created!")
    } catch (error:any) {
       if (typeof error === "string") {
          res.send(error)
       } else {
 
          console.log(error.sqlMessage || error.message);
-         res.status(500).send("Ops! Um erro inesperado ocorreu =/")
+         res.status(500).send("Ops! Unexpected error!")
       }
 
    }
