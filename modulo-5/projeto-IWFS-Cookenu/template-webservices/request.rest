@@ -1,0 +1,29 @@
+POST http://localhost:3003/signup
+Content-Type: application/json
+
+{
+   "name": "Carlos Henrique", 
+   "email": "henriquec@gmail.com" ,
+   "password": "123456",
+   "role":"ADMIN"
+}
+
+###
+POST http://localhost:3003/login
+Content-Type: application/json
+
+{
+   "email": "henriquec@gmail.com" ,
+   "password": "123456"
+}
+###
+
+GET http://localhost:3003/user/profile
+Content-Type: application/json
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjcxNGRmODBmLTJjZmItNDljNS05ZDlkLTRjNzU3YjVlYTU0OSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTY1MTE3ODExMSwiZXhwIjoxNjUxMjY0NTExfQ.RLN5diGSY2CkEGZuh1MGzYwWtHiX0LnV58JraejrqM4
+
+###
+
+GET http://localhost:3003/user/714df80f-2cfb-49c5-9d9d-4c757b5ea549
+Content-Type: application/json
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjcxNGRmODBmLTJjZmItNDljNS05ZDlkLTRjNzU3YjVlYTU0OSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTY1MTE3ODExMSwiZXhwIjoxNjUxMjY0NTExfQ.RLN5diGSY2CkEGZuh1MGzYwWtHiX0LnV58JraejrqM4
