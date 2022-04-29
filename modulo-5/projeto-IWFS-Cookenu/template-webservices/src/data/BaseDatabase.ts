@@ -1,5 +1,8 @@
 import Knex from 'knex'
 import knex from 'knex'
+import dotenv from 'dotenv'
+
+dotenv.config()
 
 export class BaseDatabase {
     static connection: Knex = knex({
