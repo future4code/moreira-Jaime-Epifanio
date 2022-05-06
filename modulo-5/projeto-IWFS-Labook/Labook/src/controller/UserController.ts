@@ -8,13 +8,12 @@ export default class UserController{
     ){}
 
     signup = async(req: Request, res: Response) =>{
-        const {name, email, password, role} = req.body;
+        const {name, email, password} = req.body;
 
         const input: SignupInputDTO ={
             name,
             email,
-            password,
-            role        
+            password                 
         }
         try {
             const token = await this.userBusiness.signup(input)
@@ -24,6 +23,27 @@ export default class UserController{
                 return res.status(400).send(error.message)
             }
             res.status(500).send("Error in signup!!")
+        }
+    }
+    
+        login = async(req: Request, res: Response) =>{
+            const {name, email, password} = req.body
+
+            const input: SignupInputDTO ={
+            name,
+            email,
+            password,
+        }
+        try{
+            const token = await this.userBusiness.login(input)
+            res.status(201).send({message: "User logged in successfully!", token})
+
+
+        }catch (error){
+            if (error instanceof Error) {
+                return res.status(400).send(error.message)
+            }
+            res.status(500).send("Login Error!")
         }
     }
 }

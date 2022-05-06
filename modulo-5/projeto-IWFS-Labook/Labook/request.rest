@@ -4,8 +4,7 @@ Content-Type: application/json
 {
    "name": "Carlos Henrique", 
    "email": "henriquec@gmail.com" ,
-   "password": "123456",
-   "role":"NORMAL"
+   "password": "123456"
 }
 
 ###
